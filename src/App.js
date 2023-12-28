@@ -28,17 +28,20 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {data ? (
-        <div>
-          <h2>{data.location.name}, {data.location.country}</h2>
-          <p>{data.current.temp_c}°C</p>
-          <p> {data.current.condition.text}</p>
-        </div>
-      ) : (
-        <p>Loading</p>
-      )}
-    </div>
+    <>
+
+      <div>
+        {data ? (
+          <div>
+            <h2>{data.location.name}, {data.location.country}</h2>
+            <p>{data.current.temp_c}°C</p>
+            <p> {data.current.condition.text}</p>
+          </div>
+        ) : (
+          <p>Loading</p>
+        )}
+      </div>
+    </>
   );
 }
 
